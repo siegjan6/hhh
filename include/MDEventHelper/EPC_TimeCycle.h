@@ -1,0 +1,56 @@
+﻿/*!
+
+\author dGFuZ3p3
+
+\section 功能
+
+事件数据类：周期事件。
+
+*/
+
+#ifndef EPC_TIMECYCLE_H
+#define EPC_TIMECYCLE_H
+
+#include "MDEventConstant.h"
+#include "MDEventHelper.h"
+#include "MDEventProperty_Config.h"
+#include "MDEventHelper_Global.h"
+
+class CEPCData_TimeCycle;
+class MDEVENTHELPERSHARED_EXPORT CEPC_TimeCycle : public CMDEventProperty_Config
+{
+public:
+    CEPC_TimeCycle();
+    ~CEPC_TimeCycle();
+   CEPC_TimeCycle(const CEPC_TimeCycle& obj);
+   CEPC_TimeCycle& operator = (const CEPC_TimeCycle& obj);
+/*!
+\section 属性
+*/
+public:
+    quint32 timeCycle() const;
+    void setTimeCycle(quint32 timeCycle);
+    void setTimeCycle(quint32 minutes, quint32 seconds, quint32 millSeconds);
+    void to_M_S_Mill(quint32& minutes, quint32& seconds, quint32& millSeconds) const;
+public:
+    virtual bool copy(const CMDEventProperty_Config* source);
+
+/*!
+\section 序列化
+*/
+public:
+    bool serialize(QDataStream& stream, bool useCurrentVersion = true);
+    void deserialize(QDataStream& stream);
+public:
+    virtual QString condition() const; //! 事件触发的条件
+/*!
+\section 序列化：JSON格式
+*/
+public:
+   virtual void serialize(QJsonObject& json);
+   virtual void deserialize(const QJsonObject& json);
+protected:
+    CEPCData_TimeCycle* m_data1;
+};
+
+#endif // EPC_TIMECYCLE_H

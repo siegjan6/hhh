@@ -1,0 +1,36 @@
+TARGET   = QtNetwork
+QT = core-private
+
+TEMPLATE = lib
+
+#DEFINES += QT_NO_USING_NAMESPACE
+DEFINES+=QT_BUILD_NETWORK_LIB
+#DEFINES += QLOCALSERVER_DEBUG QLOCALSOCKET_DEBUG
+#DEFINES += QNETWORKDISKCACHE_DEBUG
+#DEFINES += QSSLSOCKET_DEBUG
+#DEFINES += QHOSTINFO_DEBUG
+#DEFINES += QABSTRACTSOCKET_DEBUG QNATIVESOCKETENGINE_DEBUG
+#DEFINES += QTCPSOCKETENGINE_DEBUG QTCPSOCKET_DEBUG QTCPSERVER_DEBUG QSSLSOCKET_DEBUG
+#DEFINES += QUDPSOCKET_DEBUG QUDPSERVER_DEBUG
+win32-msvc*|win32-icc:QMAKE_LFLAGS += /BASE:0x64000000
+
+MODULE_PLUGIN_TYPES = \
+    bearer
+
+QMAKE_DOCS = $$PWD/doc/qtnetwork.qdocconf
+
+#load(qt_module)
+
+include(access/access.pri)
+include(bearer/bearer.pri)
+include(kernel/kernel.pri)
+include(socket/socket.pri)
+include(ssl/ssl.pri)
+
+QMAKE_LIBS += $$QMAKE_LIBS_NETWORK
+
+HEADERS += \
+    ssl/qsslcertificate.h
+
+SOURCES += \
+    ssl/qsslcertificate.cpp

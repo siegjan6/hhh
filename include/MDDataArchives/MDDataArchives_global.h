@@ -1,0 +1,21 @@
+﻿#ifndef MDDATAARCHIVES_GLOBAL_H
+#define MDDATAARCHIVES_GLOBAL_H
+
+/*!
+
+\author luyj
+
+\section 功能
+1.MDDATAARCHIVESSHARED_EXPORT 宏定义
+
+*/
+
+#include <QtCore/qglobal.h>
+
+#if defined(MDDATAARCHIVES_LIBRARY)
+#  define MDDATAARCHIVESSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define MDDATAARCHIVESSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // MDDATAARCHIVES_GLOBAL_H

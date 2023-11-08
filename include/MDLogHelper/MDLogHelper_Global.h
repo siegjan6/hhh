@@ -1,0 +1,12 @@
+﻿#ifndef MDLOGHELPER_GLOBAL_H
+#define MDLOGHELPER_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(MDLOGHELPER_LIBRARY)
+#  define MDLOGHELPERSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define MDLOGHELPERSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // MDLOGHELPER_GLOBAL_H

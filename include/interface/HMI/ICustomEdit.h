@@ -1,0 +1,36 @@
+﻿// by hdp 2014.12.23
+
+#ifndef ICUSTOMEDIT_H
+#define ICUSTOMEDIT_H
+
+#include <QList>
+#include <QPointF>
+
+//自定义编辑控件接口
+class ICustomEdit
+{
+public:
+    virtual ~ICustomEdit(){}
+//////////////////////////////////////////////////////////////////////////
+//property
+public:
+    //中心点
+    virtual QPointF customCenter() = 0;
+    //数据
+    virtual QList<QPointF>* customDatas() = 0;
+//////////////////////////////////////////////////////////////////////////
+//function
+public:
+    //鼠标移动自定义点
+    virtual void moveCustom(const QPointF& point, int pos) = 0;
+    //生成数据
+    virtual void generateCustom() = 0;
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+};
+
+#endif // ICUSTOMEDIT_H
+
+
+

@@ -1,0 +1,13 @@
+#ifndef DEFINE_H
+#define DEFINE_H
+
+
+const int LINEARCHILD_WIDTH = 9;
+const int LINEARCHILD_HEIGHT = 15;
+
+//偏移
+const int LINEAR_X = LINEARCHILD_WIDTH;
+const int LINEAR_Y = 0;
+const int LINEAR_WIDTH = LINEARCHILD_WIDTH;
+const int LINEAR_HEIGHT = LINEARCHILD_HEIGHT+3;
+#endif // DEFINE_H

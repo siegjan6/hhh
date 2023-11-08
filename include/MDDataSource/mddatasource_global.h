@@ -1,0 +1,21 @@
+﻿#ifndef MDDATASOURCE_GLOBAL_H
+#define MDDATASOURCE_GLOBAL_H
+
+/*!
+
+\author luyj
+
+\section 功能
+1.MDDATASOURCESHARED_EXPORT 宏定义
+
+*/
+
+#include <QtCore/qglobal.h>
+
+#if defined(MDDATASOURCE_LIBRARY)
+#  define MDDATASOURCESHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define MDDATASOURCESHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // MDDATASOURCE_GLOBAL_H

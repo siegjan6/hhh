@@ -1,0 +1,12 @@
+﻿#ifndef MDPROTOBUF_GLOBAL_H
+#define MDPROTOBUF_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(MDPROTOBUF_LIBRARY)
+#  define MDPROTOBUFSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define MDPROTOBUFSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // MDPROTOBUF_GLOBAL_H

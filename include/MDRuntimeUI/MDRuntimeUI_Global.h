@@ -1,0 +1,12 @@
+﻿#ifndef MDRUNTIMEUI_GLOBAL_H
+#define MDRUNTIMEUI_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(MDRUNTIMEUI_LIBRARY)
+#  define MDRUNTIMEUISHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define MDRUNTIMEUISHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // MDRUNTIMEUI_GLOBAL_H

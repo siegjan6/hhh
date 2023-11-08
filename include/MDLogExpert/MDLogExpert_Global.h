@@ -1,0 +1,12 @@
+﻿#ifndef MDLOGEXPERT_GLOBAL_H
+#define MDLOGEXPERT_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(MDLOGEXPERT_LIBRARY)
+#  define MDLOGEXPERTSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define MDLOGEXPERTSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // MDLOGEXPERT_GLOBAL_H

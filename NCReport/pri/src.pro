@@ -1,0 +1,2 @@
+SUBDIRS += designer
+TEMPLATE = subdirs

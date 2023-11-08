@@ -1,0 +1,16 @@
+﻿#ifndef MDUACLIENT_GLOBAL_H
+#define MDUACLIENT_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+QT_BEGIN_NAMESPACE
+
+#    if defined(MDUACLIENT_LIBRARY)
+#      define MDUACLIENT_EXPORT Q_DECL_EXPORT
+#    else
+#      define MDUACLIENT_EXPORT Q_DECL_IMPORT
+#    endif
+
+QT_END_NAMESPACE
+
+#endif // MDUACLIENT_GLOBAL_H
