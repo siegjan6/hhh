@@ -1,0 +1,2 @@
+﻿#include "MDOmronHostLink.h"
+

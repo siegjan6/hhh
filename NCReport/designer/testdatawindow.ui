@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NCRDTestDataWindowUI</class>
+ <widget class="QMainWindow" name="NCRDTestDataWindowUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>932</width>
+    <height>690</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Test data editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="designer.qrc">
+    <normaloff>:/designer/images/testdata.png</normaloff>:/designer/images/testdata.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="1,10">
+    <item>
+     <layout class="QFormLayout" name="centralLayout">
+      <property name="horizontalSpacing">
+       <number>3</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>3</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>ID (name):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="id"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Datasource type:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="comboType">
+        <item>
+         <property name="text">
+          <string>String list (QStringList)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Item model (QStandardItemModel)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>String parameter (QString)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Column separator:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="comboSeparator">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string>Tab</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QCheckBox" name="cbEnabled">
+        <property name="text">
+         <string>Enabled / Add to report</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableData"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>932</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actNew"/>
+    <addaction name="actOpen"/>
+    <addaction name="actSave"/>
+    <addaction name="actSaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="actClose"/>
+   </widget>
+   <widget class="QMenu" name="menuOperations">
+    <property name="title">
+     <string>Operations</string>
+    </property>
+    <addaction name="actAddData"/>
+    <addaction name="actRemoveData"/>
+    <addaction name="separator"/>
+    <addaction name="actAddRow"/>
+    <addaction name="actInsertRow"/>
+    <addaction name="actRemoveRow"/>
+    <addaction name="separator"/>
+    <addaction name="actAddColumn"/>
+    <addaction name="actInsertColumn"/>
+    <addaction name="actRemoveColumn"/>
+    <addaction name="separator"/>
+    <addaction name="actLoadContent"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuOperations"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="tbFile">
+   <property name="windowTitle">
+    <string>File toolbar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actNew"/>
+   <addaction name="actOpen"/>
+   <addaction name="actSave"/>
+  </widget>
+  <widget class="QDockWidget" name="dwList">
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <property name="margin">
+      <number>6</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Test data list:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListView" name="listID"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="tbOperation">
+   <property name="windowTitle">
+    <string>Operations toolbar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actAddData"/>
+   <addaction name="actRemoveData"/>
+   <addaction name="separator"/>
+   <addaction name="actAddRow"/>
+   <addaction name="actRemoveRow"/>
+   <addaction name="actAddColumn"/>
+   <addaction name="actRemoveColumn"/>
+  </widget>
+  <action name="actNew">
+   <property name="icon">
+    <iconset resource="designer.qrc">
+     <normaloff>:/designer/images/filenew.png</normaloff>:/designer/images/filenew.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actOpen">
+   <property name="icon">
+    <iconset resource="designer.qrc">
+     <normaloff>:/designer/images/fileopen.png</normaloff>:/designer/images/fileopen.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open test data file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actSave">
+   <property name="icon">
+    <iconset resource="designer.qrc">
+     <normaloff>:/designer/images/disk.png</normaloff>:/designer/images/disk.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actSaveAs">
+   <property name="text">
+    <string>Save as...</string>
+   </property>
+  </action>
+  <action name="actClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actAddRow">
+   <property name="icon">
+    <iconset resource="designer.qrc">
+     <normaloff>:/designer/images/table_row_insert.png</normaloff>:/designer/images/table_row_insert.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add row</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actInsertRow">
+   <property name="text">
+    <string>Insert row</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+R</string>
+   </property>
+  </action>
+  <action name="actRemoveRow">
+   <property name="icon">
+    <iconset resource="designer.qrc">
+     <normaloff>:/designer/images/table_row_delete.png</normaloff>:/designer/images/table_row_delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove row</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Del</string>
+   </property>
+  </action>
+  <action name="actAddColumn">
+   <property name="icon">
+    <iconset resource="designer.qrc">
+     <normaloff>:/designer/images/tab_add.png</normaloff>:/designer/images/tab_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add column</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actInsertColumn">
+   <property name="text">
+    <string>Insert column</string>
+   </property>
+  </action>
+  <action name="actRemoveColumn">
+   <property name="icon">
+    <iconset resource="designer.qrc">
+     <normaloff>:/designer/images/tab_delete.png</normaloff>:/designer/images/tab_delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove column</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Del</string>
+   </property>
+  </action>
+  <action name="actLoadContent">
+   <property name="text">
+    <string>Load content from file...</string>
+   </property>
+  </action>
+  <action name="actAddData">
+   <property name="icon">
+    <iconset resource="designer.qrc">
+     <normaloff>:/designer/images/table_add.png</normaloff>:/designer/images/table_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add new data table</string>
+   </property>
+  </action>
+  <action name="actRemoveData">
+   <property name="icon">
+    <iconset resource="designer.qrc">
+     <normaloff>:/designer/images/table_delete.png</normaloff>:/designer/images/table_delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove data table</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>listID</tabstop>
+  <tabstop>id</tabstop>
+  <tabstop>comboType</tabstop>
+  <tabstop>comboSeparator</tabstop>
+  <tabstop>cbEnabled</tabstop>
+  <tabstop>tableData</tabstop>
+ </tabstops>
+ <resources>
+  <include location="designer.qrc"/>
+ </resources>
+ <connections/>
+</ui>

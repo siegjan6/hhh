@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NCRDLabelOptionsTabWidgetUI</class>
+ <widget class="QTabWidget" name="NCRDLabelOptionsTabWidgetUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>465</width>
+    <height>149</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TabWidget</string>
+  </property>
+  <property name="currentIndex">
+   <number>0</number>
+  </property>
+  <widget class="QWidget" name="wGeneral">
+   <attribute name="title">
+    <string>General</string>
+   </attribute>
+   <layout class="QGridLayout" name="layWGeneral">
+    <property name="margin">
+     <number>6</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="cbWordWrap">
+      <property name="text">
+       <string>Word wrapping</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Background mode:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QComboBox" name="comboBGMode">
+      <item>
+       <property name="text">
+        <string>Transparent</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Filled background</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="cbAutoHeight">
+      <property name="text">
+       <string>Automatic height</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Background color:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QtColorComboBox" name="comboBackColor"/>
+    </item>
+    <item row="2" column="2" colspan="2">
+     <widget class="QCheckBox" name="cbBGDesign">
+      <property name="text">
+       <string>Design time background</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="3" column="2">
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="wTextOpt">
+   <attribute name="title">
+    <string>Text options</string>
+   </attribute>
+   <layout class="QGridLayout" name="layWTextOpt">
+    <property name="margin">
+     <number>6</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Capitalization</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboCapitalization">
+      <item>
+       <property name="text">
+        <string>Mixed case</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>All uppercase</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>All lowercase</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Small caps</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Capitalize</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>45</width>
+        <height>22</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="4">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Letter spacing</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QSpinBox" name="spSpacing">
+      <property name="suffix">
+       <string>px</string>
+      </property>
+      <property name="minimum">
+       <number>-100</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Vertical alignment</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Rotation angle</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="5">
+     <widget class="QSpinBox" name="spRotation">
+      <property name="suffix">
+       <string>°</string>
+      </property>
+      <property name="minimum">
+       <number>-359</number>
+      </property>
+      <property name="maximum">
+       <number>359</number>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>34</width>
+        <height>30</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="comboVAlign">
+      <item>
+       <property name="text">
+        <string>Top</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Center</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bottom</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Character length</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5">
+     <widget class="QSpinBox" name="spinBox"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QtColorComboBox</class>
+   <extends>QComboBox</extends>
+   <header>qtcolorcombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

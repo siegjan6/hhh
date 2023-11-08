@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NCRDImagePropDialogUI</class>
+ <widget class="QDialog" name="NCRDImagePropDialogUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>585</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Image properties</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="NCRDItemSourcePanel" name="isPanel">
+     <property name="title">
+      <string>Source</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="gbAlignment">
+     <property name="title">
+      <string>Format</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Image format:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboFormat">
+        <item>
+         <property name="text">
+          <string>Native/Binary</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Base64 encoded</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SVG format</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Horizontal alignment:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="comboHAlign">
+        <item>
+         <property name="text">
+          <string>Left</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Center</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Right</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Vertical alignment:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="comboVAlign">
+        <item>
+         <property name="text">
+          <string>Top</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Center</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bottom</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>HTML height:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>HTML width:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLineEdit" name="wHtmlHeight"/>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLineEdit" name="wHtmlWidth"/>
+      </item>
+      <item row="0" column="3">
+       <widget class="QCheckBox" name="cbPinToRight">
+        <property name="text">
+         <string>Pin to right</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="laySc">
+     <item>
+      <widget class="QGroupBox" name="gbScaling">
+       <property name="title">
+        <string>Scale</string>
+       </property>
+       <layout class="QVBoxLayout">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <property name="leftMargin">
+         <number>6</number>
+        </property>
+        <property name="topMargin">
+         <number>6</number>
+        </property>
+        <property name="rightMargin">
+         <number>6</number>
+        </property>
+        <property name="bottomMargin">
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="gbAspect">
+          <property name="title">
+           <string>Aspect ratio</string>
+          </property>
+          <layout class="QVBoxLayout">
+           <item>
+            <widget class="QRadioButton" name="rbKeepAspect">
+             <property name="text">
+              <string>Keep aspect ratio</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="rbExpandAspect">
+             <property name="text">
+              <string>Keep aspect ratio by expanding</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="rbIgnoreAspect">
+             <property name="text">
+              <string>Ignore aspect ratio</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="gbTrans">
+          <property name="title">
+           <string>Transformation</string>
+          </property>
+          <layout class="QVBoxLayout">
+           <item>
+            <widget class="QRadioButton" name="rbFastTran">
+             <property name="text">
+              <string>Off (fast)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="rbSmoothTran">
+             <property name="text">
+              <string>Smooth transformation (slow)</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>Preview</string>
+       </property>
+       <layout class="QVBoxLayout">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="leftMargin">
+         <number>2</number>
+        </property>
+        <property name="topMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>2</number>
+        </property>
+        <property name="bottomMargin">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="lblPreview">
+          <property name="text">
+           <string>IMAGE</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="NCRDPrintWhenPanel" name="printWhenPanel" native="true"/>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>NCRDPrintWhenPanel</class>
+   <extends>QWidget</extends>
+   <header>ncrdprintwhenpanel.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NCRDItemSourcePanel</class>
+   <extends>QGroupBox</extends>
+   <header>ncrditemsourcepanel.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>isPanel</tabstop>
+  <tabstop>comboFormat</tabstop>
+  <tabstop>comboHAlign</tabstop>
+  <tabstop>comboVAlign</tabstop>
+  <tabstop>rbKeepAspect</tabstop>
+  <tabstop>rbExpandAspect</tabstop>
+  <tabstop>rbIgnoreAspect</tabstop>
+  <tabstop>rbFastTran</tabstop>
+  <tabstop>rbSmoothTran</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>NCRDImagePropDialogUI</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>NCRDImagePropDialogUI</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

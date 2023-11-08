@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CMulitItemCfgDialog</class>
+ <widget class="QDialog" name="CMulitItemCfgDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>344</width>
+    <height>430</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>多单元格属性</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QGroupBox" name="groupboxDataSource">
+     <property name="title">
+      <string>数据源</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="2,3,2">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>类型:</string>
+          </property>
+          <property name="buddy">
+           <cstring>comboboxDataSource</cstring>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboboxDataSource"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushbuttonSelectVar">
+          <property name="text">
+           <string>选择配方...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="2,5">
+        <item>
+         <widget class="QLabel" name="labelRecipe">
+          <property name="text">
+           <string>配方名:</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineeditRecipeName</cstring>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineeditRecipeName">
+          <property name="maxLength">
+           <number>32</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="2,5">
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>小数位数:</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineeditDecimal</cstring>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineeditDecimal">
+          <property name="inputMask">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupboxRangeCheck">
+     <property name="title">
+      <string>有效性检查</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_11"/>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="2,3">
+        <item>
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>最小值:</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineeditMin</cstring>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineeditMin"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="2,3">
+        <item>
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>最大值:</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineeditMax</cstring>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineeditMax"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkboxTooltip">
+        <property name="text">
+         <string>显示数据超限提示信息</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineeditOutRangeTip">
+        <property name="maxLength">
+         <number>32</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupboxShowMode">
+     <property name="title">
+      <string>显示模式</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,5">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>类型:</string>
+          </property>
+          <property name="buddy">
+           <cstring>comboboxType</cstring>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboboxType"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horlayoutValueMap" stretch="2,5">
+        <item>
+         <widget class="QLabel" name="labelValueMap">
+          <property name="text">
+           <string>数值映射表:</string>
+          </property>
+          <property name="buddy">
+           <cstring>comboboxValueTable</cstring>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboboxValueTable"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QCheckBox" name="checkboxEditable">
+       <property name="text">
+        <string>不可编辑</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>20</number>
+     </property>
+     <property name="leftMargin">
+      <number>60</number>
+     </property>
+     <property name="rightMargin">
+      <number>60</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="pushbuttonOk">
+       <property name="text">
+        <string>确定</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushbuttonCancel">
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

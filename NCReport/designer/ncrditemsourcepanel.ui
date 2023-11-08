@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NCRDItemSourcePanel</class>
+ <widget class="QGroupBox" name="NCRDItemSourcePanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>663</width>
+    <height>94</height>
+   </rect>
+  </property>
+  <property name="title">
+   <string>Item source</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="0" column="2">
+    <spacer name="spcr">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>127</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QLineEdit" name="resource"/>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Item source type:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="labelResource">
+     <property name="text">
+      <string>Expression:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="NCRDItemSourceTypeCombo" name="comboSourceType"/>
+   </item>
+   <item row="1" column="5">
+    <widget class="QToolButton" name="btnExpBuild">
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="4">
+    <widget class="QToolButton" name="btnPreview">
+     <property name="text">
+      <string>...</string>
+     </property>
+     <property name="icon">
+      <iconset resource="designer.qrc">
+       <normaloff>:/designer/images/preview.png</normaloff>:/designer/images/preview.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QToolButton" name="btnSelectFile">
+     <property name="text">
+      <string>...</string>
+     </property>
+     <property name="icon">
+      <iconset resource="designer.qrc">
+       <normaloff>:/designer/images/fileopen.png</normaloff>:/designer/images/fileopen.png</iconset>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>NCRDItemSourceTypeCombo</class>
+   <extends>QComboBox</extends>
+   <header>ncrditemsourcetypecombo.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>comboSourceType</tabstop>
+ </tabstops>
+ <resources>
+  <include location="designer.qrc"/>
+ </resources>
+ <connections/>
+</ui>

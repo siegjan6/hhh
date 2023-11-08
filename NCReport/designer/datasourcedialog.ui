@@ -1,0 +1,1361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NCRDDataSourceDialogUI</class>
+ <widget class="QDialog" name="NCRDDataSourceDialogUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>943</width>
+    <height>880</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Data source settings</string>
+  </property>
+  <layout class="QVBoxLayout" name="formLayout">
+   <item>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QGroupBox" name="gbDSList">
+      <property name="title">
+       <string>Data sources</string>
+      </property>
+      <layout class="QVBoxLayout" name="layLeftBG">
+       <property name="spacing">
+        <number>3</number>
+       </property>
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QListView" name="listDS"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="layBtn">
+         <property name="spacing">
+          <number>3</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="btnAdd">
+           <property name="toolTip">
+            <string>Add</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="designer.qrc">
+             <normaloff>:/designer/images/add.png</normaloff>:/designer/images/add.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnRemove">
+           <property name="toolTip">
+            <string>Remove</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="designer.qrc">
+             <normaloff>:/designer/images/delete.png</normaloff>:/designer/images/delete.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <layout class="QVBoxLayout" name="layRight">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="gbDS">
+         <property name="title">
+          <string>Data source properties</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout1" columnstretch="1,2,1,2">
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="dsID"/>
+          </item>
+          <item row="6" column="1" colspan="3">
+           <widget class="QLineEdit" name="filenameurl"/>
+          </item>
+          <item row="2" column="2">
+           <widget class="QLabel" name="lblParentID">
+            <property name="text">
+             <string>Parent datasource</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QLabel" name="label_24">
+            <property name="text">
+             <string>Primary key column index</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>Location type</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="lblFilename">
+            <property name="text">
+             <string>File name</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QSpinBox" name="spPKColIndex"/>
+          </item>
+          <item row="2" column="3">
+           <widget class="QLineEdit" name="wParentDataSource"/>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="comboRole">
+            <item>
+             <property name="text">
+              <string>Begining of the report</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Child datasource (subquery)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>When group change</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Subreport iteration</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Data source type</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_18">
+            <property name="text">
+             <string>Opening/running role</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Data source ID</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboDsType">
+            <item>
+             <property name="text">
+              <string>SQL query</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Text</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>XML</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>String list</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Item model</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Custom</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>DataView</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="comboLocation">
+            <item>
+             <property name="text">
+              <string>Static</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>File</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Http</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ftp</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Parameter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="2" colspan="2">
+           <widget class="QCheckBox" name="cbEmpty">
+            <property name="text">
+             <string>Allow empty data source</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0" colspan="4">
+           <widget class="QGroupBox" name="groupBox">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Sampling</string>
+            </property>
+            <widget class="QCheckBox" name="checkBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>30</y>
+               <width>101</width>
+               <height>27</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Enable</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="samplingField">
+             <property name="geometry">
+              <rect>
+               <x>230</x>
+               <y>30</y>
+               <width>131</width>
+               <height>32</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_25">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>30</y>
+               <width>121</width>
+               <height>32</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Sampling Field</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="samplingPeriod">
+             <property name="geometry">
+              <rect>
+               <x>230</x>
+               <y>70</y>
+               <width>131</width>
+               <height>32</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_26">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>70</y>
+               <width>121</width>
+               <height>32</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Sampling Period</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="samplingNullGap">
+             <property name="geometry">
+              <rect>
+               <x>510</x>
+               <y>30</y>
+               <width>131</width>
+               <height>32</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_27">
+             <property name="geometry">
+              <rect>
+               <x>370</x>
+               <y>30</y>
+               <width>131</width>
+               <height>32</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Sampling NullGap</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QStackedWidget" name="stackW">
+         <property name="currentIndex">
+          <number>6</number>
+         </property>
+         <widget class="QWidget" name="pageSQL">
+          <layout class="QVBoxLayout" name="layPageSql">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QTabWidget" name="tabWidget">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="tabQuery">
+              <attribute name="title">
+               <string>SQL Query</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="layTabQuery">
+               <item>
+                <widget class="QGroupBox" name="gbID">
+                 <property name="title">
+                  <string>Identification</string>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout3">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_17">
+                    <property name="text">
+                     <string>Connection ID</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="connID"/>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="gbQuery">
+                 <property name="title">
+                  <string>Query</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_3">
+                  <property name="spacing">
+                   <number>3</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>6</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>6</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>6</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>6</number>
+                  </property>
+                  <item>
+                   <widget class="QPlainTextEdit" name="queryEditor">
+                    <property name="tabStopWidth">
+                     <number>4</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout">
+                    <item>
+                     <spacer name="horizontalSpacer_3">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btnTestQuery">
+                      <property name="text">
+                       <string>Test Query</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="designer.qrc">
+                        <normaloff>:/designer/images/next.png</normaloff>:/designer/images/next.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>16</width>
+                        <height>16</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tabConn">
+              <attribute name="title">
+               <string>Database connection</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="layTabConn">
+               <item>
+                <widget class="QGroupBox" name="groupBox_2">
+                 <property name="title">
+                  <string>Options</string>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label">
+                    <property name="text">
+                     <string>Connection options</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="connectOpt"/>
+                  </item>
+                  <item row="1" column="0" colspan="2">
+                   <widget class="QCheckBox" name="cbFwOnly">
+                    <property name="text">
+                     <string>Forward only mode</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0" colspan="2">
+                   <widget class="QCheckBox" name="cbForceUpdateStepBackRel">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="text">
+                     <string>Force update on stepping backward in relation</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0" colspan="2">
+                   <widget class="QCheckBox" name="cbPrivateConn">
+                    <property name="text">
+                     <string>Use private database connection</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="gbConnection">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="title">
+                  <string>Private connection parameters</string>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_2">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_16">
+                    <property name="text">
+                     <string>Driver</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QComboBox" name="cDriver">
+                    <item>
+                     <property name="text">
+                      <string>QPSQL</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>QMYSQL</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>QOCI</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>QODBC</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>QDB2</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>QTDS</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>QSQLITE</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>QIBASE</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>QSQLITE2</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>QSYMSQL</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="0" column="3">
+                   <widget class="QLabel" name="label_8">
+                    <property name="text">
+                     <string>Port</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_3">
+                    <property name="text">
+                     <string>Host</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1" colspan="4">
+                   <widget class="QLineEdit" name="cHost"/>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_5">
+                    <property name="text">
+                     <string>Database</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1" colspan="4">
+                   <widget class="QLineEdit" name="cDatabase"/>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="label_6">
+                    <property name="text">
+                     <string>Username</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1" colspan="4">
+                   <widget class="QLineEdit" name="cUsername"/>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QLabel" name="label_7">
+                    <property name="text">
+                     <string>Password</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1" colspan="4">
+                   <widget class="QLineEdit" name="cPassword">
+                    <property name="echoMode">
+                     <enum>QLineEdit::Password</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="4">
+                   <widget class="QSpinBox" name="cPort">
+                    <property name="specialValueText">
+                     <string>Default</string>
+                    </property>
+                    <property name="maximum">
+                     <number>99999</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <spacer name="horizontalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item row="5" column="4">
+                   <widget class="QPushButton" name="btnTestConn">
+                    <property name="text">
+                     <string>Test</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>80</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tabTester">
+              <attribute name="title">
+               <string>Query test</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_4">
+               <property name="verticalSpacing">
+                <number>3</number>
+               </property>
+               <item row="0" column="0" colspan="2">
+                <widget class="QTableView" name="sqlTestView"/>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageText">
+          <layout class="QVBoxLayout" name="layTex1st">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="gbText">
+             <property name="title">
+              <string>Text datasource</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <item>
+               <layout class="QGridLayout" name="gridLayout_6">
+                <property name="verticalSpacing">
+                 <number>3</number>
+                </property>
+                <item row="1" column="1" colspan="3">
+                 <widget class="QLineEdit" name="wEncoding"/>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_15">
+                  <property name="text">
+                   <string>Column delimiter:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QLabel" name="label_19">
+                  <property name="text">
+                   <string>Custom delimiter character:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QComboBox" name="comboTxtColumnSep">
+                  <item>
+                   <property name="text">
+                    <string>Tab</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Comma</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Semicolon</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Space</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Vertical bar</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Custom</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_23">
+                  <property name="text">
+                   <string>Encoding</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="3">
+                 <widget class="QLineEdit" name="delimCharTxt">
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="4">
+                 <spacer name="horizontalSpacer_5">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="3" column="0" colspan="4">
+                 <widget class="QCheckBox" name="cbColumnHeader">
+                  <property name="text">
+                   <string>First row as column header</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string>Static text:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPlainTextEdit" name="wStaticText"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageXML">
+          <layout class="QVBoxLayout" name="layXml">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="gbXML">
+             <property name="title">
+              <string>XML datasource</string>
+             </property>
+             <layout class="QVBoxLayout" name="_6">
+              <property name="spacing">
+               <number>3</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>Static XML string</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPlainTextEdit" name="staticXML"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageList">
+          <layout class="QVBoxLayout" name="layPageList">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="gbStringList">
+             <property name="title">
+              <string>QStringList datasource</string>
+             </property>
+             <layout class="QVBoxLayout" name="lay46488887">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <item>
+               <layout class="QGridLayout" name="laySLOpt">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_11">
+                  <property name="text">
+                   <string>String list ID:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1" colspan="3">
+                 <widget class="QLineEdit" name="stringListID"/>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_20">
+                  <property name="text">
+                   <string>Column delimiter:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QComboBox" name="comboSlColumnSep">
+                  <item>
+                   <property name="text">
+                    <string>Tab</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Comma</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Semicolon</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Space</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Vertical bar</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Custom</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QLabel" name="label_21">
+                  <property name="text">
+                   <string>Custom delimiter character:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QLineEdit" name="delimCharSl">
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="4">
+                 <spacer name="spacerSlOpt">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="sp2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>101</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageModel">
+          <layout class="QVBoxLayout" name="lay445402">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="gbModel">
+             <property name="title">
+              <string>Item model datasource</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <layout class="QGridLayout" name="gridLayout_5">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_13">
+                  <property name="text">
+                   <string>Item model ID</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="modelID"/>
+                </item>
+                <item row="0" column="2" rowspan="2">
+                 <spacer name="spIMDS">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="1" column="0" colspan="2">
+                 <widget class="QCheckBox" name="cbUseModelAppearance">
+                  <property name="text">
+                   <string>Use model appearance roles</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_22">
+                <property name="text">
+                 <string>Relation Data Specification</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPlainTextEdit" name="wItemModelSpec"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageCustom">
+          <layout class="QVBoxLayout" name="layPageCustomDS">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="gbCustom">
+             <property name="title">
+              <string>Custom datasource</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <property name="spacing">
+               <number>3</number>
+              </property>
+              <property name="leftMargin">
+               <number>6</number>
+              </property>
+              <property name="topMargin">
+               <number>6</number>
+              </property>
+              <property name="rightMargin">
+               <number>6</number>
+              </property>
+              <property name="bottomMargin">
+               <number>6</number>
+              </property>
+              <item>
+               <widget class="QGroupBox" name="groupBox_4">
+                <property name="title">
+                 <string>Options</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_3" columnstretch="1,5,0">
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="spacing">
+                  <number>3</number>
+                 </property>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_14">
+                   <property name="text">
+                    <string>Custom specification:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="customDescrLab">
+                   <property name="text">
+                    <string>Description:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1" colspan="2">
+                  <widget class="QLineEdit" name="customDescr"/>
+                 </item>
+                 <item row="0" column="1" colspan="2">
+                  <widget class="QLineEdit" name="customID"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_3">
+                <property name="title">
+                 <string>Columns</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout">
+                 <property name="spacing">
+                  <number>3</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>6</number>
+                 </property>
+                 <item>
+                  <widget class="QTreeView" name="columnView">
+                   <property name="alternatingRowColors">
+                    <bool>true</bool>
+                   </property>
+                   <property name="sortingEnabled">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageDataView">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="dataViewNamelabel">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>110</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>DataViewName</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="dataViewNameComboBox">
+               <item>
+                <property name="text">
+                 <string>view1</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>view2</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>view3</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableView" name="dataViewFieldTableView"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>listDS</tabstop>
+  <tabstop>comboDsType</tabstop>
+  <tabstop>dsID</tabstop>
+  <tabstop>comboRole</tabstop>
+  <tabstop>comboLocation</tabstop>
+  <tabstop>filenameurl</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>connID</tabstop>
+  <tabstop>btnTestQuery</tabstop>
+  <tabstop>btnRemove</tabstop>
+  <tabstop>btnTestConn</tabstop>
+  <tabstop>sqlTestView</tabstop>
+  <tabstop>wEncoding</tabstop>
+  <tabstop>comboTxtColumnSep</tabstop>
+  <tabstop>delimCharTxt</tabstop>
+  <tabstop>cbColumnHeader</tabstop>
+  <tabstop>stringListID</tabstop>
+  <tabstop>comboSlColumnSep</tabstop>
+  <tabstop>delimCharSl</tabstop>
+  <tabstop>modelID</tabstop>
+  <tabstop>customDescr</tabstop>
+  <tabstop>customID</tabstop>
+  <tabstop>columnView</tabstop>
+  <tabstop>connectOpt</tabstop>
+  <tabstop>cHost</tabstop>
+  <tabstop>cUsername</tabstop>
+  <tabstop>cDatabase</tabstop>
+  <tabstop>cPassword</tabstop>
+  <tabstop>cPort</tabstop>
+  <tabstop>cDriver</tabstop>
+  <tabstop>btnAdd</tabstop>
+ </tabstops>
+ <resources>
+  <include location="designer.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>NCRDDataSourceDialogUI</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>NCRDDataSourceDialogUI</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NCRDLabelPropDialogUI</class>
+ <widget class="QDialog" name="NCRDLabelPropDialogUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>505</width>
+    <height>326</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Label properties</string>
+  </property>
+  <layout class="QVBoxLayout" name="formLayout" stretch="10,1,0,1,1">
+   <item>
+    <widget class="QTabWidget" name="tabLabel">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Label</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabOpt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="NCRDLabelOptWidget" name="tabGeneral">
+      <attribute name="title">
+       <string>General</string>
+      </attribute>
+     </widget>
+     <widget class="NCRDSpecTextOptWidget" name="tabSpecial">
+      <attribute name="title">
+       <string>Text</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="NCRDBorderPanel" name="borderPanel" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>80</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="NCRDPrintWhenPanel" name="printWhenPanel" native="true"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="layBtn">
+     <item>
+      <widget class="NCRDCondFormatButton" name="btnCondFormat"/>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>NCRDPrintWhenPanel</class>
+   <extends>QWidget</extends>
+   <header>ncrdprintwhenpanel.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NCRDLabelOptWidget</class>
+   <extends>QWidget</extends>
+   <header>ncrdlabeloptwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NCRDSpecTextOptWidget</class>
+   <extends>QWidget</extends>
+   <header>ncrdspectextoptwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NCRDCondFormatButton</class>
+   <extends>QPushButton</extends>
+   <header>ncrdcondformatbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>NCRDBorderPanel</class>
+   <extends>QWidget</extends>
+   <header>ncrdborderpanel.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tabLabel</tabstop>
+  <tabstop>tabOpt</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>NCRDLabelPropDialogUI</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>NCRDLabelPropDialogUI</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

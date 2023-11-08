@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CVariableArchivesDialog</class>
+ <widget class="QDialog" name="CVariableArchivesDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>415</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>190</y>
+     <width>391</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>归档模式</string>
+   </property>
+   <widget class="QRadioButton" name="modeRadioButton0">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>361</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>内存</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="modeRadioButton1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>磁盘文件</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="modeRadioButton2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>内存与磁盘文件</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>内存模式时间跨度（秒）</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="timeRangeEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>361</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>391</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>归档规则</string>
+   </property>
+   <widget class="QRadioButton" name="rulerRadioButton0">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>不归档</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rulerRadioButton1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>变化归档</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rulerRadioButton2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>周期归档（秒）</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cycleEdit">
+    <property name="geometry">
+     <rect>
+      <x>29</x>
+      <y>130</y>
+      <width>351</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CModuleSelectDialog</class>
+ <widget class="QDialog" name="CModuleSelectDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>214</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QListWidget" name="listWidget">
+     <item>
+      <property name="text">
+       <string>中心点</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>指针</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>临界区</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>环绕文字</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>刻度</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>刻度背景</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>背景</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>半圆背景</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>标签</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>显示值</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>控制层</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>直表指针</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>直表临界区</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>直表刻度文字</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>直表刻度</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>直表刻度背景</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>直表显示块</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>温度计</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="OKBtn">
+       <property name="text">
+        <string>确定</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="CancelBtn">
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

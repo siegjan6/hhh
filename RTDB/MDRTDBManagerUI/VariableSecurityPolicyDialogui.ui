@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CVariableSecurityPolicyDialog</class>
+ <widget class="QDialog" name="CVariableSecurityPolicyDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>415</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTableWidget" name="securityPolicyTableWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>415</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>动作名称</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>安全策略</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

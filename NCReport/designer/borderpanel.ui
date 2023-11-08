@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NCRDBorderPanelUI</class>
+ <widget class="QWidget" name="NCRDBorderPanelUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>396</width>
+    <height>81</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" columnstretch="0,0">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>6</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>6</number>
+   </property>
+   <property name="verticalSpacing">
+    <number>3</number>
+   </property>
+   <item row="0" column="1">
+    <widget class="QGroupBox" name="gbVisOpt">
+     <property name="title">
+      <string>Border Options</string>
+     </property>
+     <widget class="NCRDLineStyleCombo" name="comboLineStyle">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>30</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="cbBorderVisible">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>32</y>
+        <width>75</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>visible</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="spinLineWidth">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>30</y>
+        <width>111</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="suffix">
+       <string> mm</string>
+      </property>
+      <property name="maximum">
+       <double>10.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.050000000000000</double>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="borderColorButton">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>30</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>NCRDLineStyleCombo</class>
+   <extends>QComboBox</extends>
+   <header>ncrdlinestylecombo.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

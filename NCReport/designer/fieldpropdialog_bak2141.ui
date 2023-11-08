@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NCRDFieldPropDialogUI</class>
+ <widget class="QDialog" name="NCRDFieldPropDialogUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>655</width>
+    <height>493</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Field properties</string>
+  </property>
+  <layout class="QVBoxLayout" name="formLayout" stretch="1,10,1,1,1">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Field source type:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="NCRDItemSourceTypeCombo" name="comboSourceType"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Data type:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboDataType">
+       <item>
+        <property name="text">
+         <string>Text</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Numeric</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Date</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>DateTime</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Boolean</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabFieldExp">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="NCRDFieldExpWidget" name="tabDefault">
+      <attribute name="title">
+       <string>Field expression: en</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="layTabDefault">
+       <property name="spacing">
+        <number>3</number>
+       </property>
+       <property name="margin">
+        <number>3</number>
+       </property>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="NCRDLabelOptWidget" name="tabGeneral">
+      <attribute name="title">
+       <string>General</string>
+      </attribute>
+     </widget>
+     <widget class="NCRDSpecTextOptWidget" name="tabSpecial">
+      <attribute name="title">
+       <string>Text</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tabNum">
+      <attribute name="title">
+       <string>Numeric</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="horizontalSpacing">
+        <number>6</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>3</number>
+       </property>
+       <property name="margin">
+        <number>6</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="cbFormating">
+         <property name="text">
+          <string>Number formating</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Decimal precision:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QSpinBox" name="spinDecimals">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximum">
+          <number>12</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <spacer name="spNu">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>68</width>
+           <height>13</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="cbLocalize">
+         <property name="text">
+          <string>Use localized settings</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Field width:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QSpinBox" name="spinFWidth">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximum">
+          <number>999</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QCheckBox" name="cbBlankIfZero">
+         <property name="text">
+          <string>Blank if value equals zero</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Format character:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLineEdit" name="formatChar">
+         <property name="maxLength">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>Fill character:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLineEdit" name="fillChar">
+         <property name="maxLength">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <spacer name="spNu2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabDate">
+      <attribute name="title">
+       <string>Date/Time</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="horizontalSpacing">
+        <number>6</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>3</number>
+       </property>
+       <property name="margin">
+        <number>6</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>Date / DateTime format:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="dateFormat"/>
+       </item>
+       <item row="1" column="0">
+        <spacer name="spDT">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="NCRDPrintWhenPanel" name="printWhenPanel" native="true"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="layBtn">
+     <item>
+      <widget class="NCRDCondFormatButton" name="btnCondFormat"/>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>NCRDPrintWhenPanel</class>
+   <extends>QWidget</extends>
+   <header>ncrdprintwhenpanel.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NCRDLabelOptWidget</class>
+   <extends>QWidget</extends>
+   <header>ncrdlabeloptwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NCRDSpecTextOptWidget</class>
+   <extends>QWidget</extends>
+   <header>ncrdspectextoptwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NCRDCondFormatButton</class>
+   <extends>QPushButton</extends>
+   <header>ncrdcondformatbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>NCRDFieldExpWidget</class>
+   <extends>QWidget</extends>
+   <header>ncrdfieldexpwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NCRDItemSourceTypeCombo</class>
+   <extends>QComboBox</extends>
+   <header>ncrditemsourcetypecombo.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>comboSourceType</tabstop>
+  <tabstop>comboDataType</tabstop>
+  <tabstop>tabFieldExp</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>btnCondFormat</tabstop>
+  <tabstop>buttonBox</tabstop>
+  <tabstop>spinDecimals</tabstop>
+  <tabstop>spinFWidth</tabstop>
+  <tabstop>formatChar</tabstop>
+  <tabstop>fillChar</tabstop>
+  <tabstop>dateFormat</tabstop>
+  <tabstop>cbBlankIfZero</tabstop>
+  <tabstop>cbLocalize</tabstop>
+  <tabstop>cbFormating</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>NCRDFieldPropDialogUI</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>525</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>NCRDFieldPropDialogUI</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>525</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
